@@ -122,8 +122,8 @@ The `sprites` mixin generates identical output to the CSS template
 .col-12 {
   width: 100%; }
 
-html,
-body {
+body,
+html {
   margin: 0;
   padding: 0; }
 
@@ -140,40 +140,41 @@ body {
   max-width: 1415px; }
 
 *,
-*:before,
-*:after {
+*:after,
+*:before {
   box-sizing: border-box; }
 
-ul, ol {
+ol,
+ul {
   margin: 0;
   padding: 0; }
 
 .img-responsive {
-  max-width: 100%;
-  display: block; }
+  display: block;
+  max-width: 100%; }
 
 hr {
-  border: 0;
   margin-top: 1em;
   margin-bottom: 1em;
   height: 1px;
+  border: 0;
   background-color: #36464f; }
 
 .main {
   position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
-  left: 0;
-  right: 0; }
+  left: 0; }
 
 .sidebar {
   position: absolute;
   top: 0;
   bottom: 0;
+  padding-bottom: 74px;
   width: 210px;
   background-color: #243036;
-  padding-bottom: 74px;
-  transition: width .2s ease; }
+  transition: width 0.2s ease; }
   .sidebar__head {
     padding: 10px; }
   .sidebar__footer {
@@ -183,32 +184,32 @@ hr {
     .sidebar__footer .phoneNumber {
       padding: 0 10px; }
     .sidebar__footer .phoneDay {
-      padding: 0 10px 10px 10px; }
+      padding: 0 10px 10px; }
 
 .user {
-  display: block;
   position: relative;
+  display: block;
   text-decoration: none; }
   .user__img {
-    display: block;
     position: absolute;
     left: 0;
-    background-color: #fff;
+    display: block;
+    overflow: hidden;
     width: 40px;
     border-radius: 50%;
-    overflow: hidden; }
+    background-color: #fff; }
     .user__img img {
       width: 40px; }
   .user__name {
-    width: 100%;
     padding-left: 50px;
-    font-size: 1.5em;
-    color: #fff; }
+    width: 100%;
+    color: #fff;
+    font-size: 1.5em; }
 
 .logined {
-  text-align: right;
+  margin-top: 1em;
   color: #fff;
-  margin-top: 1em; }
+  text-align: right; }
   .logined__last, .logined__logout {
     color: #b0bec5;
     font-size: 1.1em;
@@ -222,14 +223,14 @@ hr {
   list-style: none; }
   .menu__icon {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 10px;
+    display: inline-block;
     width: 40px;
     height: 40px;
-    display: inline-block;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: 2.5em; }
+    background-size: 2.5em;
+    background-repeat: no-repeat; }
     .menu__icon.dash {
       background-image: url("../img/dashboard.svg"); }
     .menu__icon.wiki {
@@ -249,61 +250,65 @@ hr {
         padding-bottom: 0; }
     .menu__item.submenu > .menu__wrap:after {
       position: absolute;
-      right: 1em;
       top: 1em;
-      content: " ";
+      right: 1em;
       width: 2em;
       height: 2em;
       background: url("../img/arrow.svg") no-repeat center;
       background-size: 15px;
-      transform: rotate(-90deg);
-      transition: transform .2s ease; }
+      content: " ";
+      transition: transform 0.2s ease;
+      transform: rotate(-90deg); }
   .menu__link {
     display: inline-block;
-    font-size: 1.2em;
-    line-height: 1.5em;
-    color: #b0bec5;
-    max-height: 3em;
     overflow: hidden;
-    text-decoration: none;
+    margin-right: 3em;
     margin-left: 5em;
-    margin-right: 3em; }
+    max-height: 3em;
+    color: #b0bec5;
+    text-decoration: none;
+    font-size: 1.2em;
+    line-height: 1.5em; }
   .menu__wrap {
+    position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
-    position: relative; }
-    .menu__wrap.activemenu, .menu__wrap:hover, .menu__wrap:focus {
-      cursor: pointer;
-      background-color: rgba(0, 0, 0, 0.2); }
-      .menu__wrap.activemenu:before, .menu__wrap:hover:before, .menu__wrap:focus:before {
-        display: block;
-        height: 100%;
-        content: " ";
+    transition: background-color 0.2s ease; }
+    .menu__wrap.activemenu, .menu__wrap:focus, .menu__wrap:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
+      .menu__wrap.activemenu:before, .menu__wrap:focus:before, .menu__wrap:hover:before {
         position: absolute;
-        width: 5px;
-        left: 0;
         top: 0;
-        background-color: #d31c5b; }
+        left: 0;
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #d31c5b;
+        content: " "; }
   .menu .menu .menu__link {
     margin-left: 35px; }
   .menu .menu .menu .menu__link {
     margin-left: 55px; }
 
 .phoneNumber {
+  color: #fff;
   font-size: 1.8em;
-  line-height: 1.5em;
-  color: #fff; }
+  line-height: 1.5em; }
 
 .phoneDay {
+  color: #b0bec5;
   font-size: 1.1em;
-  line-height: 1.5em;
-  color: #b0bec5; }
+  line-height: 1.5em; }
 
 @media (max-width: 768px) {
   .sidebar {
+    padding-bottom: 0;
     width: 60px; }
     .sidebar__footer {
       display: none; }
+  .user__img {
+    position: static; }
   .user__name {
     display: none; }
   .logined {
