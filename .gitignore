@@ -1,5 +1,4 @@
 /node_modules
 /assets/vendor
-/.idea
-.idea/vcs.xml
+.idea
 build/fonts/font-awesome/
