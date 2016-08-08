@@ -1,4 +1,5 @@
 /node_modules
 /assets/vendor
 .idea
+.idea/workspace.xml
 build/fonts/font-awesome/
