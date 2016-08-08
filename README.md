@@ -1,4 +1,4 @@
-# Beeline.hello
+# Sidebar
 ### Установка nodejs модулей: ###
 `npm i`
 
