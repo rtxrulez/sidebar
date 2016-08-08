@@ -183,6 +183,7 @@ hr {
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
+    transition: background-color .2s ease;
     &.activemenu,
     &:hover,
     &:focus {
