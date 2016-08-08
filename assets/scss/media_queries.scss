@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    &__footer {
+      display: none;
+    }
+  }
+  .user {
+    &__name {
+      display: none;
+    }
+  }
+  .logined {
+    display: none;
+  }
+  .menu {
+    &__link {
+      display: none;
+    }
+    &__wrap {
+      text-align: center;
+      &:after {
+        display: none;
+      }
+    }
+    &__icon {
+      position: static;
+    }
+    &__item {
+      &.active {
+        padding: 0;
+        background-color: $brand-primaryblack;
+        > .menu {
+          display: none;
+        }
+      }
+    }
+  }
+}

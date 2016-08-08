@@ -1,0 +1,54 @@
+aside.sidebar
+    .sidebar__head
+        a.user(href="")
+            .user__img
+                img.img-responsive(src="img/user2.jpg")
+            .user__name
+                | Онуфрий <br>Петрович
+        .logined
+            .logined__last Последний логин 16:45
+            a.logined__logout(href="#") Выход
+
+    hr
+    ul.menu
+        li.menu__item.submenu
+            .menu__wrap
+                .menu__icon.dash
+                a.menu__link(href="#")
+                    | Dashboard
+
+        li.menu__item.submenu
+            .menu__wrap
+                .menu__icon.wiki
+                a.menu__link(href="#")
+                    | Wiki
+
+        li.menu__item.submenu
+            .menu__wrap
+                .menu__icon.msg
+                a.menu__link(href="#")
+                    | Messages
+
+        li.menu__item.submenu.active
+            .menu__wrap
+                .menu__icon.wiki
+                a.menu__link(href="#")
+                    | Some multi-line menu item
+            ul.menu
+                li.menu__item
+                    .menu__wrap
+                        a.menu__link(href="#")
+                            | Sub Menu Item 1-Level1
+                li.menu__item.submenu.active
+                    .menu__wrap
+                        a.menu__link(href="#")
+                            | Sub Menu Item 2-Level1
+                    ul.menu
+                        li.menu__item
+                            .menu__wrap.activemenu
+                                a.menu__link(href="#")
+                                    | Active Sub Menu Item-L2
+    .sidebar__footer
+        hr
+        .phoneNumber 8(800)2000-600
+        .phoneDay пн-вс 09:00-22:00

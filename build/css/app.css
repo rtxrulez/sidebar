@@ -1,0 +1,323 @@
+@font-face {
+  font-family: 'OfficinaSerifC-Bold';
+  src: url("/fonts/OfficinaSerifC-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/OfficinaSerifC-Bold.otf") format("opentype"), url("/fonts/OfficinaSerifC-Bold.woff") format("woff"), url("/fonts/OfficinaSerifC-Bold.ttf") format("truetype"), url("/fonts/OfficinaSerifC-Bold.svg#OfficinaSerifC-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OfficinaSerifMediumC';
+  src: url("/fonts/OfficinaSerifMediumC.eot?#iefix") format("embedded-opentype"), url("/fonts/OfficinaSerifMediumC.otf") format("opentype"), url("/fonts/OfficinaSerifMediumC.woff") format("woff"), url("/fonts/OfficinaSerifMediumC.ttf") format("truetype"), url("/fonts/OfficinaSerifMediumC.svg#OfficinaSerifMediumC") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+.row:after {
+  display: block;
+  clear: both;
+  content: ''; }
+
+.row + .row {
+  margin-top: 0%; }
+
+[class^="col-"] {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 0%; }
+  [class^="col-"]:last-child {
+    margin-right: 0%; }
+
+/*
+.col-1  { width:5.583333333333333%; }
+.col-2  { width:14.16666666666667%; }
+.col-3  { width:22.75%; }
+.col-4  { width:31.33333333333333%; }
+.col-5  { width:39.91666666666667%; }
+.col-6  { width:48.5%; }
+.col-7  { width:57.08333333333333%; }
+.col-8  { width:65.66666666666666%; }
+.col-9  { width:74.25%; }
+.col-10 { width:82.83333333333333%; }
+.col-11 { width:91.41666666666666%; }
+.col-12 { width:100%; }
+*/
+.col-1 {
+  width: 8.33333%; }
+
+.col-2 {
+  width: 16.66667%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33333%; }
+
+.col-5 {
+  width: 41.66667%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33333%; }
+
+.col-8 {
+  width: 66.66667%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33333%; }
+
+.col-11 {
+  width: 91.66667%; }
+
+.col-12 {
+  width: 100%; }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #000;
+  font-size: 10px;
+  font-family: "Arial"; }
+
+.container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 15px;
+  min-width: 1005px;
+  max-width: 1415px; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+ul, ol {
+  margin: 0;
+  padding: 0; }
+
+.img-responsive {
+  max-width: 100%;
+  display: block; }
+
+hr {
+  border: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 1px;
+  background-color: #36464f; }
+
+.main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 210px;
+  background-color: #243036;
+  padding-bottom: 74px;
+  transition: width .2s ease; }
+  .sidebar__head {
+    padding: 10px; }
+  .sidebar__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+    .sidebar__footer .phoneNumber {
+      padding: 0 10px; }
+    .sidebar__footer .phoneDay {
+      padding: 0 10px 10px 10px; }
+
+.user {
+  display: block;
+  position: relative;
+  text-decoration: none; }
+  .user__img {
+    display: block;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden; }
+    .user__img img {
+      width: 40px; }
+  .user__name {
+    width: 100%;
+    padding-left: 50px;
+    font-size: 1.5em;
+    color: #fff; }
+
+.logined {
+  text-align: right;
+  color: #fff;
+  margin-top: 1em; }
+  .logined__last, .logined__logout {
+    color: #b0bec5;
+    font-size: 1.1em;
+    line-height: 1.5em; }
+  .logined__logout {
+    display: inline-block;
+    margin-top: 1em;
+    line-height: 1em; }
+
+.menu {
+  list-style: none; }
+  .menu__icon {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2.5em; }
+    .menu__icon.dash {
+      background-image: url("../img/dashboard.svg"); }
+    .menu__icon.wiki {
+      background-image: url("../img/notebook.svg"); }
+    .menu__icon.msg {
+      background-image: url("../img/speech-bubble.svg"); }
+  .menu__item {
+    position: relative; }
+    .menu__item.active {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #36464f; }
+      .menu__item.active.submenu .menu__wrap:after {
+        transform: rotate(-180deg); }
+      .menu__item.active .active {
+        padding-top: 0;
+        padding-bottom: 0; }
+    .menu__item.submenu > .menu__wrap:after {
+      position: absolute;
+      right: 1em;
+      top: 1em;
+      content: " ";
+      width: 2em;
+      height: 2em;
+      background: url("../img/arrow.svg") no-repeat center;
+      background-size: 15px;
+      transform: rotate(-90deg);
+      transition: transform .2s ease; }
+  .menu__link {
+    display: inline-block;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #b0bec5;
+    max-height: 3em;
+    overflow: hidden;
+    text-decoration: none;
+    margin-left: 5em;
+    margin-right: 3em; }
+  .menu__wrap {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative; }
+    .menu__wrap.activemenu, .menu__wrap:hover, .menu__wrap:focus {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.2); }
+      .menu__wrap.activemenu:before, .menu__wrap:hover:before, .menu__wrap:focus:before {
+        display: block;
+        height: 100%;
+        content: " ";
+        position: absolute;
+        width: 5px;
+        left: 0;
+        top: 0;
+        background-color: #d31c5b; }
+  .menu .menu .menu__link {
+    margin-left: 35px; }
+  .menu .menu .menu .menu__link {
+    margin-left: 55px; }
+
+.phoneNumber {
+  font-size: 1.8em;
+  line-height: 1.5em;
+  color: #fff; }
+
+.phoneDay {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  color: #b0bec5; }
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px; }
+    .sidebar__footer {
+      display: none; }
+  .user__name {
+    display: none; }
+  .logined {
+    display: none; }
+  .menu__link {
+    display: none; }
+  .menu__wrap {
+    text-align: center; }
+    .menu__wrap:after {
+      display: none; }
+  .menu__icon {
+    position: static; }
+  .menu__item.active {
+    padding: 0;
+    background-color: #243036; }
+    .menu__item.active > .menu {
+      display: none; } }

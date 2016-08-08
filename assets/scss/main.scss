@@ -1,0 +1,228 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #000;
+    font-size: $font-base-size;
+    font-family: $font-base;
+}
+.container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 15px;
+  min-width: 1005px;
+  max-width: 1415px;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+//a {
+//  color: $gray-default;
+//  &:hover,
+//  &:focus {
+//    color: lighter($gray-default, 10);
+//  }
+//}
+.img-responsive {
+  max-width: 100%;
+  display: block;
+}
+hr {
+  border:0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 1px;
+  background-color: $brand-primary;
+}
+.main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 210px;
+  background-color: $brand-primaryblack;
+  padding-bottom: 74px;
+  transition: width .2s ease;
+  &__head {
+    padding: 10px;
+  }
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .phoneNumber {
+      padding: 0 10px;
+    }
+    .phoneDay {
+      padding: 0 10px 10px 10px;
+    }
+  }
+}
+.user {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  &__img {
+    display: block;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 40px;
+    }
+  }
+  &__name {
+    width: 100%;
+    padding-left: 50px;
+    font-size: 1.5em;
+    color: $brand-color;
+  }
+}
+.logined {
+  text-align: right;
+  color: $brand-color;
+  margin-top: 1em;
+  &__last,
+  &__logout {
+    color: $brand-noactive;
+    font-size: 1.1em;
+    line-height: 1.5em;
+  }
+  &__logout {
+    display: inline-block;
+    margin-top: 1em;
+    line-height: 1em;
+  }
+}
+.menu {
+  list-style: none;
+  &__icon {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2.5em;
+    &.dash {
+      background-image: url('../img/dashboard.svg');
+    }
+    &.wiki {
+      background-image: url('../img/notebook.svg');
+    }
+    &.msg {
+      background-image: url('../img/speech-bubble.svg');
+    }
+  }
+  &__item {
+    position: relative;
+    &.active {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: $brand-primary;
+      &.submenu {
+        .menu__wrap {
+          &:after {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+      .active {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+    &.submenu {
+      > .menu__wrap {
+        &:after {
+          position: absolute;
+          right: 1em;
+          top: 1em;
+          content: " ";
+          width: 2em;
+          height: 2em;
+          background: url('../img/arrow.svg') no-repeat center;
+          background-size: 15px;
+          transform: rotate(-90deg);
+          transition: transform .2s ease;
+        }
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: $brand-noactive;
+    max-height: 3em;
+    overflow: hidden;
+    text-decoration: none;
+    margin-left: 5em;
+    margin-right: 3em;
+  }
+  &__wrap {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    &.activemenu,
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $brand-splash;
+      &:before {
+        display: block;
+        height: 100%;
+        content: " ";
+        position: absolute;
+        width: 5px;
+        left: 0;
+        top: 0;
+        background-color: $brand-active;
+      }
+    }
+  }
+  .menu {
+    .menu {
+      &__item {
+      }
+      &__link {
+        margin-left: 35px;
+      }
+      .menu {
+        &__link {
+          margin-left: 55px;
+        }
+      }
+    }
+  }
+
+}
+.phoneNumber {
+  font-size: 1.8em;
+  line-height: 1.5em;
+  color: $brand-color;
+}
+.phoneDay {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  color: $brand-noactive;
+}
